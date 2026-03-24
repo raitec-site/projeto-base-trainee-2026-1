@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #05053f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cairo', sans-serif;
+}
+
+.container {
+  background: rgba(9, 204, 204, 0.12);
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+#mensagem {
+  font-size: 3rem;
+  color: #e6e6e6;
+}
+
+.subtitulo {
+  color: #09cccc;
+  font-weight: 700;
+}
+
+.texto {
+  color: #e6e6e6;
+}

@@ -1,0 +1,22 @@
+<h1>Estrutura do Raitec</h1>
+
+<h2>Eixos</h2>
+<ul>
+  <% eixos.forEach(e => { %>
+    <li>
+      <a href="/estrutura/<%= e.slug %>">
+        <strong><%= e.nome %></strong>
+    </li>
+  <% }) %>
+</ul>
+
+
+<h2>Times</h2>
+<ul>
+  <% times.forEach(t => { %>
+    <li>
+      <a href="/estrutura/<%= t.slug %>">
+        <strong><%= t.nome %></strong>
+    </li>
+  <% }) %>
+</ul>

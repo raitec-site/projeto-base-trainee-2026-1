@@ -1,28 +1,41 @@
 const express = require("express");
+const path = require("path");
 const app = express();
 
-// Libera acesso do front (CORS)
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
+// EJS
+app.set("view engine", "ejs");
 
-// Rota principal
+// arquivos estáticos
+app.use(express.static(path.join(__dirname, "public")));
+
+
+const sobreRoutes = require("./routes/quem-somos/sobre"); 
+const estruturaRoutes = require("./routes/quem-somos/estrutura"); 
+const membrosRoutes = require("./routes/quem-somos/membros/membros"); 
+const projetosRoutes = require("./routes/projetos/projetos"); 
+const eventosRoutes = require("./routes/eventos/eventos"); 
+const raipediaRoutes = require("./routes/raipedia/raipedia"); 
+const processoSeletivoRoutes = require("./routes/processo-seletivo/processo-seletivo"); 
+const noticiasRoutes = require("./routes/noticias/noticias");
+const contatoRoutes = require("./routes/contato/contato"); 
+
+app.use("/", sobreRoutes);
+app.use("/", estruturaRoutes);
+app.use("/", membrosRoutes);
+app.use("/", projetosRoutes);
+app.use("/", eventosRoutes);
+app.use("/", raipediaRoutes);
+app.use("/", processoSeletivoRoutes);
+app.use("/", noticiasRoutes);
+app.use("/", contatoRoutes);
+
+
+// rota principal
 app.get("/", (req, res) => {
-  res.send("Backend do RAITec está rodando!");
-});
-
-// Rota que o front vai usar
-app.get("/api", (req, res) => {
-  res.json({ mensagem: "Site do RAITec em Breve!!!" });
+  res.render("index");
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Servidor rodando na porta", PORT);
 });
-
-
-

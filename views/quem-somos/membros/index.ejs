@@ -1,0 +1,11 @@
+<h1>Membros da Equipe</h1>
+
+<ul>
+  <% membros.forEach(m => { %>
+    <li>
+      <a href="/membros/<%= m.slug %>">
+        <strong><%= m.nome %></strong> - <%= m.eixo %> - <%= m.time %>
+      </a>
+    </li>
+  <% }) %>
+</ul>
