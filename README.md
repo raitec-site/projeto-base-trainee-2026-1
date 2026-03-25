@@ -1,6 +1,135 @@
-# RAITec Site
+# 🚀 RAITec Site
+
+Projeto web institucional do RAITec.
+
 ---
 
+# 📋 Pré-requisitos
+
+Antes de rodar o projeto, você precisa ter instalado:
+
+* **Git** → para clonar o repositório
+* **Node.js** → necessário para rodar o projeto
+* **npm** → gerenciador de pacotes (já vem com o Node)
+* **VS Code** (recomendado) → editor de código
+
+---
+
+# 🚀 Como rodar o projeto
+
+## 🔹 1. Clonar o repositório (Observação: usamos -b para clonar a branch development)
+
+```bash
+git clone -b https://github.com/raitec-site/Backend.git
+```
+
+
+## 🔹 2. Entrar na pasta do projeto
+
+```bash
+cd raitec-site
+```
+
+
+## 🔹 3. Instalar as dependências
+
+```bash
+npm install
+```
+
+Isso irá instalar todas as dependências e recriar a pasta `node_modules`.
+
+
+## 🔹 4. Rodar o servidor
+
+### ▶️ Modo padrão
+
+```bash
+node index.js
+```
+
+
+### 🔄 Modo desenvolvimento (recomendado)
+
+```bash
+npx nodemon index.js
+```
+
+👉 **O que é o nodemon?**
+O `nodemon` reinicia automaticamente o servidor sempre que você altera o código.
+Isso evita ficar parando e rodando o servidor manualmente toda hora.
+
+
+
+## 🔹 5. Acessar no navegador
+
+```bash
+http://localhost:3000
+```
+
+---
+
+# ⚠️ Observações importantes
+
+* A pasta `node_modules` **não é enviada para o GitHub**
+* Sempre execute `npm install` ao baixar o projeto
+* Caso o servidor não inicie, verifique se o Node.js está instalado corretamente
+
+
+# 💡 Dica
+
+Para instalar o nodemon globalmente (opcional):
+
+```bash
+npm install -g nodemon
+```
+
+Assim você pode rodar apenas:
+
+```bash
+nodemon index.js
+```
+
+---
+
+# 📌 Tecnologias utilizadas
+
+* Node.js
+* Express
+* EJS
+
+---
+
+# Organização do Projeto
+
+* **routes/** → controla as rotas (backend)
+* **views/** → páginas EJS (frontend)
+* **public/** → CSS, JS e imagens
+* **middlewares/** → lógica intermediária (ex: autenticação)
+* **services/** → integrações externas (Firebase)
+* **models/** → estrutura de dados (futuro)
+
+---
+# Rotas principais
+
+```bash
+/                     → Página inicial
+/contato              → Contato
+
+/estrutura            → Estrutura
+/membros              → Lista de membros
+/membros/:slug        → Membro individual
+
+/noticias             → Lista de notícias
+/noticias/:slug       → Notícia individual
+
+/projetos             → Lista de projetos
+/projetos/:slug       → Projeto individual
+
+/admin/login          → Login admin
+/admin/dashboard      → Painel admin
+```
+---
 # Estrutura do Projeto
 
 ```bash
@@ -70,140 +199,5 @@ raitec-site/
 ```
 
 ---
-
-# Importante sobre Git
-
-### NÃO sobe para o GitHub:
-
-* `node_modules/` → muito pesado e desnecessário
-* arquivos sensíveis (ex: chaves do Firebase)
-
-###  O `.gitignore` serve para:
-
-Evitar que arquivos desnecessários ou sensíveis sejam enviados para o repositório.
-
-Exemplo de `.gitignore`:
-
-```bash
-node_modules/
-.env
-firebase-key.json
-```
-
----
-
-# Organização do Projeto
-
-* **routes/** → controla as rotas (backend)
-* **views/** → páginas EJS (frontend)
-* **public/** → CSS, JS e imagens
-* **middlewares/** → lógica intermediária (ex: autenticação)
-* **services/** → integrações externas (Firebase)
-* **models/** → estrutura de dados (futuro)
-
----
-
-# 🚀 Como rodar o projeto
-
-## 🔹 1. Clonar o repositório
-
-```bash
-git clone https://github.com/raitec-site/Backend
-```
-
----
-
-## 🔹 2. Entrar na pasta do projeto
-
-```bash
-cd raitec-site
-```
-
----
-
-## 🔹 3. Instalar as dependências
-
-```bash
-npm install
-```
-
-Isso vai recriar a pasta `node_modules`
-
----
-
-##  4. Rodar o servidor
-
-```bash
-node index.js
-```
-
-ou (recomendado):
-
-```bash
-npx nodemon index.js
-```
-
----
-
-## 5. Acessar no navegador
-
-```bash
-http://localhost:3000
-```
-
----
-
-# Rotas principais
-
-```bash
-/                     → Página inicial
-/contato              → Contato
-
-/estrutura            → Estrutura
-/membros              → Lista de membros
-/membros/:slug        → Membro individual
-
-/noticias             → Lista de notícias
-/noticias/:slug       → Notícia individual
-
-/projetos             → Lista de projetos
-/projetos/:slug       → Projeto individual
-
-/admin/login          → Login admin
-/admin/dashboard      → Painel admin
-```
-
----
-
-# Tecnologias utilizadas
-
-* Node.js
-* Express
-* EJS
-* (Futuro) Firebase
-
----
-
-# Status do Projeto
-
-✔ Estrutura completa
-✔ Rotas organizadas
-✔ Pronto para integração com banco de dados
-✔ Preparado para painel administrativo
-
----
-
-# Observação
-
-Após clonar o projeto, sempre execute:
-
-```bash
-npm install
-```
-
-Caso contrário, o projeto não irá rodar.
-
----
-
 # Desenvolvido por
 Time de Mídias RAITec
