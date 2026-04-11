@@ -51,8 +51,8 @@ router.get("/estrutura/:slug", (req, res) => {
 
   if (!eixo && !time) {
     return res.status(404).send("Eixo ou Time não encontrado");
-  }
 
+  }
   res.render("quem-somos/eixo-time", {
     eixo, time
   });
