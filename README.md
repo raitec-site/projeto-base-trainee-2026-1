@@ -20,14 +20,17 @@ Antes de rodar o projeto, você precisa ter instalado:
 ## 🔹 1. Clonar o repositório (Observação: usamos -b para clonar a branch development)
 
 ```bash
-git clone -b https://github.com/raitec-site/Backend.git
+git clone https://github.com/raitec-site/projeto-base-trainee-2026-1
 ```
-
+Ou
+```bash
+git clone -b development https://github.com/raitec-site/projeto-base-trainee-2026-1
+```
 
 ## 🔹 2. Entrar na pasta do projeto
 
 ```bash
-cd raitec-site
+cd projeto-base-trainee-2026-1
 ```
 
 
