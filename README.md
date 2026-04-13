@@ -17,12 +17,12 @@ Antes de rodar o projeto, você precisa ter instalado:
 
 # 🚀 Como rodar o projeto
 
-## 🔹 1. Clonar o repositório (Observação: usamos -b para clonar a branch development)
+## 🔹 1. Clonar o repositório 
 
 ```bash
 git clone https://github.com/raitec-site/projeto-base-trainee-2026-1
 ```
-Ou
+Ou usamos -b para clonar a branch development
 ```bash
 git clone -b development https://github.com/raitec-site/projeto-base-trainee-2026-1
 ```
